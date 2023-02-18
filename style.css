@@ -71,7 +71,7 @@ body {
   justify-content: space-between;
   padding: 15px;
   flex: 1;
-  touch-action: none;
+  touch-action: auto;
 }
 
 .check-btn {
