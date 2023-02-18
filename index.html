@@ -5,29 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Philemon</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
+   
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <script
+    <style>
+      .glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+    </style>
+    <script>
       src="https://kit.fontawesome.com/3da1a747b2.js"
       crossorigin="anonymous"
-    ></script>
+    </script>
   </head>
   <body>
-    <h1>Welcome to The Book of Philemon</h1>
-    <p>Someone please help me. My Book is out of Order!!</p>
-    <ul class="draggable-list" id="draggable-list"></ul>
-    <div class = "w3-container">
-    <button class="check-btn w3-btn" id="check">
-      Check Order
-      <i class="fas fa-paper-plane"></i>
-    </bu</div>
-    
-<div>
-    <button class="check-btn w3-btn" onclick="window.location.reload();">
-        Reset Order
+        
+   
+    <p class="w3-xxlarge glow">Philemon</p>
+    <p class="w3-large glow">The verses are out of order. Drag and Drop into the correct order, then check your results.</p>
+
+    <div class = "w3-container  w3-center">
+      <button class="check-btn w3-btn w3-cyan " id="check">
+        Check Order
         <i class="fas fa-paper-plane"></i>
-      </button>
-    </div>
+      </bu</div>
+     
+  <div class="w3-container ">
+      <button class="check-btn w3-btn w3-cyan" onclick="window.location.reload();">
+          Reset Order
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+
+    <ul class="draggable-list" id="draggable-list"></ul>
+<!-- 
+    <div class = "w3-container">
+      <button class="check-btn w3-btn w3-aqua" id="check">
+        Check Order
+        <i class="fas fa-paper-plane"></i>
+      </bu</div>
+      
+  <div class="w3-container">
+      <button class="check-btn w3-btn" onclick="window.location.reload();">
+          Reset Order
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+    -->
     <script src="script.js"></script>
   </body>
 </html>
