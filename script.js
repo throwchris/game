@@ -131,4 +131,34 @@ function addEventListeners() {
   });
 }
 
+var dropTarget = document.getElementById("drop-target");
+
+dropTarget.addEventListener("drop", function(event) {
+  // prevent default behavior (opening a link)
+  event.preventDefault();
+
+  // get the data being dropped
+  var data = event.dataTransfer.getData("text/plain");
+
+  // get the element that was dropped over
+  var droppedOver = event.target;
+
+  // if the droppedOver element is not the same as the droppedElement
+  if (droppedOver.id !== data) {
+    // swap the positions of the two elements
+    var droppedElement = document.getElementById(data);
+    var droppedOverParent = droppedOver.parentNode;
+
+    droppedOverParent.replaceChild(droppedElement, droppedOver);
+    droppedOverParent.insertBefore(droppedOver, droppedElement);
+  }
+});
+
+var dragItem = document.getElementById("drag-item");
+
+dragItem.addEventListener("dragstart", function(event) {
+  // store the data being dragged
+  event.dataTransfer.setData("text/plain", event.target.id);
+});
+
 check.addEventListener('click', checkOrder);
